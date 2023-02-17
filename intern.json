@@ -1,0 +1,14 @@
+{
+    "functionalSuites": ["tests/**/*.js"],
+    "functionalTimeouts": {
+      "pageLoad": 10000,
+      "connectTimeout": 10000,
+      "find": 5000
+    },
+    "environments": [
+      {
+        "browserName": "chrome",
+        "fixSessionCapabilities": false
+      }
+    ]
+  }

@@ -1,0 +1,23 @@
+{
+  "name": "the_intern_testing",
+  "version": "1.0.0",
+  "description": "practice testing with the intern",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gyozpada/the_intern_testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gyozpada/the_intern_testing/issues"
+  },
+  "homepage": "https://github.com/gyozpada/the_intern_testing#readme",
+  "devDependencies": {
+    "intern": "^4.10.1"
+  }
+}
