@@ -79,4 +79,28 @@ suite('Kalkulator', ()=>{
         assert.exists(eqBtn);
 
     });
+
+    test('Tombol angka', async({remote})=>{
+        
+        let displayText;
+
+        //click button 1
+        await numericButtons[1].click();
+        //check display, number must be 1
+        displayText = await display.getVisibleText();
+        assert.equal(displayText,'1');
+
+        //click button 2
+        await numericButtons[2].click();
+        //check display, number must be 12
+        displayText = await display.getVisibleText();
+        assert.equal(displayText,'12');
+
+        //click button 3
+        await numericButtons[3].click();
+        //check display, number must be 123
+        displayText = await display.getVisibleText();
+        assert.equal(displayText,'123'); 
+
+    });
 });
