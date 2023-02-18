@@ -103,4 +103,13 @@ suite('Kalkulator', ()=>{
         assert.equal(displayText,'123'); 
 
     });
+
+    test('Tombol AC', async({remote})=>{
+
+        await ACBtn.click();
+
+        let displayTextAfter = await display.getVisibleText();
+        assert.equal(displayTextAfter,'0')
+        
+    })
 });
