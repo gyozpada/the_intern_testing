@@ -112,4 +112,40 @@ suite('Kalkulator', ()=>{
         assert.equal(displayTextAfter,'0')
         
     })
+
+    test('Tombol Operator', async({remote})=>{
+
+        //+
+        await numericButtons[3].click();
+        await addBtn.click();
+        await numericButtons[2].click();
+        await eqBtn.click();
+        let displayText = await display.getVisibleText();
+        assert.equal(displayText,'5');
+
+        //-
+        await subtractBtn.click();
+        await numericButtons[1];
+        await eqBtn.click();
+
+        displayText = await display.getVisibleText();
+        assert.equal(displayText,'4');
+
+        //x
+        await multiplyBtn.click()
+        await numericButtons[2].click();
+        await eqBtn.click();
+
+        displayText = await display.getVisibleText();
+        assert.equal(displayText,'8');
+
+        // :
+        await divideBtn.click();
+        await numericButtons[4].click();
+        await eqBtn.click();
+
+        displayText = await display.getVisibleText();
+        assert.equal(displayText,'2');
+
+    })
 });
